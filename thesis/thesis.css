@@ -1,4 +1,5 @@
 /* master setup */
+
 * {
   margin:0;
   padding:0;
@@ -16,7 +17,7 @@ counter-reset: sidenote-counter;
 html, body {
   margin:0;
   padding:0;
-  font-size:12px;
+  font-size:14px;
 }
 
 body,
@@ -34,6 +35,17 @@ ul {
   font-weight:normal;
   overflow-wrap:break-word;
   font-size:1rem;
+}
+
+h1 {
+  /* font-weight:bold; */
+  cursor:default;
+  font-family: "Jacquarda Bastarda 9", serif;
+  font-size: 1.5rem;
+  }
+
+#bibliography-a a, a:visited {
+  color: black;
 }
 
 a, a:visited {
@@ -200,16 +212,14 @@ label {
   overflow:scroll;
 }
 
-#introduction.post-container {
-  z-index: 10;
-}
 
+  /* .post-header h1 {
+    cursor:default;
+    font-family: "Jacquarda Bastarda 9", serif;
+    font-weight: 20px;
+  } */
 
-h1 {
-  font-weight:bold;
-  }
-
-  .post-header {
+  .post-header p {
     cursor:default;
   }
 
@@ -254,9 +264,13 @@ margin-top:1rem;
 .image-container .post {
   border: 1px solid black;
   padding: 10px ;
+  background-color: whitesmoke;
 }
 
-
+.interlude-container .post-header p {
+  display:inline;
+  font-family: "Jacquarda Bastarda 9", serif;
+  }
 
 .interlude-container p, .interlude-container .post {
   color:lightgrey;
@@ -273,13 +287,12 @@ margin-top:1rem;
 .interlude-container .post-header::before {
   content:"[";
   color:black;
+
+
 }
 .interlude-container .post-header::after {
   content:"]";
   color:black;
-}
-.interlude-container .post-header p {
-display:inline;
 }
 
 .interlude-container .post::before {
@@ -302,10 +315,6 @@ display:inline;
   filter:blur(0) grayscale(0);
   -webkit-filter:blur(0) grayscale(0);
   opacity: 1;
-}
-
-#thankyou {
-  margin:1rem;
 }
 
 /* for pixelated drawings */
@@ -332,7 +341,7 @@ display:inline;
   background-color: white;
   color: black;
   margin-left: 20px;
-  
+  /* font-family: "Jacquarda Bastarda 9", serif; */
 }
 
 .menu a:hover {
