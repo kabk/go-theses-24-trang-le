@@ -208,7 +208,7 @@ margin-top:1rem;
 
 
 .post-container p {
-  width: 375px;
+  width: 100%;
   /* text-align: justify; */
   /* width: 380px; font-size:12px; */
 }
@@ -375,6 +375,23 @@ margin-top:1rem;
 /* MOBILE */
 @media (max-width: 600px) {
 
+  #title {
+    width: 100%;
+    position:relative;
+  }
+  .menu {
+    display:none;
+  }
+  #main {
+    margin-left: 1rem;
+    margin-top: 2rem;
+    margin-right: 1rem;
+  }
+
+  .post-container, .interlude-container, .image-container, .interlude-container .post, {
+    width: 100%;
+  }
+
   label.margin-toggle:not(.sidenote-number) {
     display: inline;
 } 
@@ -399,5 +416,7 @@ margin-top:1rem;
 label {
     cursor: pointer;
 }
+
+
 
 }
