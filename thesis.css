@@ -153,40 +153,6 @@ body.darkmode p{
   color:#FFF;
 }
 
-
-
-
-/* MOBILE */
-@media (max-width: 600px) {
-
-  label.margin-toggle:not(.sidenote-number) {
-    display: inline;
-} 
-
-.sidenote,
-.marginnote {
-    display: none;
-}
-
-.margin-toggle:checked + .sidenote,
-.margin-toggle:checked + .marginnote {
-    display: block;
-    float: left;
-    left: 1rem;
-    clear: both;
-    width: 95%;
-    margin: 1rem 2.5%;
-    vertical-align: baseline;
-    position: relative;
-}
-
-label {
-    cursor: pointer;
-}
-
-}
-
-
 #main {
   margin-left: 25vw;
   margin-top:4rem;
@@ -235,10 +201,16 @@ margin-top:1rem;
 .post-container .post {
   border:1px solid black;
   padding:10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  /* scrollbar-width: none; */
 }
 
+
 .post-container p {
-  width: 380px;
+  width: 375px;
+  /* text-align: justify; */
+  /* width: 380px; font-size:12px; */
 }
 
  .border-container {
@@ -356,4 +328,76 @@ margin-top:1rem;
   margin-top: -100px;
   height: 100px;
   visibility: hidden;
+}
+
+/* scroll bar */
+/* Hide the scrollbar track by default */
+::-webkit-scrollbar {
+  width: 9px; /* Width of the scrollbar */
+  background: transparent; /* Make scrollbar track transparent */
+}
+
+/* Handle of the scrollbar */
+::-webkit-scrollbar-thumb {
+  color: transparent; /* Color of the scrollbar handle */
+  border-radius: 0; /* Rounded corners of the handle */
+  opacity: 0;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color:black; /* Color of the scrollbar handle on hover */
+}
+
+/* Show the scrollbar track when scrolling */
+::-webkit-scrollbar-track {
+  background: transparent; /* Make scrollbar track transparent */
+}
+
+/* Show the scrollbar thumb when scrolling */
+::-webkit-scrollbar-thumb {
+  background: black; /* Semi-transparent scrollbar handle */
+}
+
+/* Hide scrollbar thumb when not scrolling */
+::-webkit-scrollbar-thumb {
+  background: black; /* Set the background color */
+  transition: opacity 0.5s; /* Smooth transition for opacity */
+  opacity: 0; /* Initially hide the scrollbar thumb */
+}
+
+/* Show scrollbar thumb when scrolling */
+::-webkit-scrollbar-thumb:hover {
+  opacity: 1;
+}
+
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+  label.margin-toggle:not(.sidenote-number) {
+    display: inline;
+} 
+
+.sidenote,
+.marginnote {
+    display: none;
+}
+
+.margin-toggle:checked + .sidenote,
+.margin-toggle:checked + .marginnote {
+    display: block;
+    float: left;
+    left: 1rem;
+    clear: both;
+    width: 95%;
+    margin: 1rem 2.5%;
+    vertical-align: baseline;
+    position: relative;
+}
+
+label {
+    cursor: pointer;
+}
+
 }
