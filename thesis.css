@@ -239,6 +239,12 @@ margin-top:1rem;
   background-color: whitesmoke;
 }
 
+#how-container {
+  font-family: "Jacquarda Bastarda 9", serif;
+  /* background-color: whitesmoke; */
+  text-align: center;
+}
+
 .interlude-container .post-header p {
   display:inline;
   font-family: "Jacquarda Bastarda 9", serif;
@@ -256,6 +262,7 @@ margin-top:1rem;
   transition:all 1s ease-in-out;
   opacity: 0.3;
 }
+
 .interlude-container .post-header::before {
   content:"[";
   color:black;
@@ -344,32 +351,32 @@ margin-top:1rem;
   opacity: 0;
 }
 
-/* Handle on hover */
+/* Handle on hover
 ::-webkit-scrollbar-thumb:hover {
   background-color:black; /* Color of the scrollbar handle on hover */
-}
+/* } */
 
-/* Show the scrollbar track when scrolling */
+/* Show the scrollbar track when scrolling
 ::-webkit-scrollbar-track {
   background: transparent; /* Make scrollbar track transparent */
-}
+/* } */ */
 
 /* Show the scrollbar thumb when scrolling */
-::-webkit-scrollbar-thumb {
+/* ::-webkit-scrollbar-thumb {
   background: black; /* Semi-transparent scrollbar handle */
-}
+/* } */ */
 
 /* Hide scrollbar thumb when not scrolling */
-::-webkit-scrollbar-thumb {
+/* ::-webkit-scrollbar-thumb {
   background: black; /* Set the background color */
-  transition: opacity 0.5s; /* Smooth transition for opacity */
-  opacity: 0; /* Initially hide the scrollbar thumb */
-}
+  /* transition: opacity 0.5s; Smooth transition for opacity */
+  /* opacity: 0; Initially hide the scrollbar thumb */
+/* } */ */
 
 /* Show scrollbar thumb when scrolling */
-::-webkit-scrollbar-thumb:hover {
-  opacity: 1;
-}
+/* ::-webkit-scrollbar-thumb:hover { */
+  /* opacity: 1; */
+/* } */
 
 
 /* MOBILE */
