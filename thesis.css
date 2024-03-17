@@ -245,6 +245,52 @@ margin-top:1rem;
   text-align: center;
 }
 
+/* MOBILE */
+@media (max-width: 600px) {
+
+  #title {
+    width: 100%;
+    position:relative;
+  }
+  .menu {
+    display:none;
+  }
+  #main {
+    margin-left: 1rem;
+    margin-top: 2rem;
+    margin-right: 1rem;
+  }
+
+  .post-container, .interlude-container, .image-container, .interlude-container .post, {
+    width: 100%;
+  }
+
+  label.margin-toggle:not(.sidenote-number) {
+    display: inline;
+} 
+
+.sidenote,
+.marginnote {
+    display: none;
+}
+
+.margin-toggle:checked + .sidenote,
+.margin-toggle:checked + .marginnote {
+    display: block;
+    float: left;
+    left: 1rem;
+    clear: both;
+    width: 95%;
+    margin: 1rem 2.5%;
+    vertical-align: baseline;
+    position: relative;
+}
+
+label {
+    cursor: pointer;
+}
+}
+
 .interlude-container .post-header p {
   display:inline;
   font-family: "Jacquarda Bastarda 9", serif;
@@ -379,51 +425,4 @@ margin-top:1rem;
 /* } */
 
 
-/* MOBILE */
-@media (max-width: 600px) {
 
-  #title {
-    width: 100%;
-    position:relative;
-  }
-  .menu {
-    display:none;
-  }
-  #main {
-    margin-left: 1rem;
-    margin-top: 2rem;
-    margin-right: 1rem;
-  }
-
-  .post-container, .interlude-container, .image-container, .interlude-container .post, {
-    width: 100%;
-  }
-
-  label.margin-toggle:not(.sidenote-number) {
-    display: inline;
-} 
-
-.sidenote,
-.marginnote {
-    display: none;
-}
-
-.margin-toggle:checked + .sidenote,
-.margin-toggle:checked + .marginnote {
-    display: block;
-    float: left;
-    left: 1rem;
-    clear: both;
-    width: 95%;
-    margin: 1rem 2.5%;
-    vertical-align: baseline;
-    position: relative;
-}
-
-label {
-    cursor: pointer;
-}
-
-
-
-}
