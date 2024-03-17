@@ -1,14 +1,9 @@
 /* master setup */
-
 * {
   margin:0;
   padding:0;
   box-sizing:border-box;
 }
-
-/* *, *:before, *:after {
-  box-sizing:inherit;
-} */
 
 html {
 counter-reset: sidenote-counter;
@@ -38,7 +33,6 @@ ul {
 }
 
 h1 {
-  /* font-weight:bold; */
   cursor:default;
   font-family: "Jacquarda Bastarda 9", serif;
   font-size: 1.5rem;
@@ -51,6 +45,7 @@ h1 {
 a, a:visited {
   color: white;
 }
+/**/
 
 /* Sidenotes, margin notes, figures, captions */
 img {
@@ -78,8 +73,6 @@ img {
   background-color: black;
   color: white;
 }
-
-
 
 .sidenote-number {
   counter-increment: sidenote-counter;
@@ -127,7 +120,7 @@ input.margin-toggle {
 
 label.sidenote-number {
   display: inline-block;
-  max-height: 2rem; /* should be less than or equal to paragraph line-height */
+  max-height: 2rem;
 }
 
 label.margin-toggle:not(.sidenote-number) {
@@ -143,7 +136,7 @@ label.margin-toggle:not(.sidenote-number) {
 .margin-toggle:checked + .marginnote {
     display: block;
 }
-
+/**/
 
 
 #main {
@@ -151,7 +144,7 @@ label.margin-toggle:not(.sidenote-number) {
   margin-top:4rem;
 }
 
-
+/* title */
 #title {
   position: fixed;
   left:1rem;
@@ -160,24 +153,28 @@ label.margin-toggle:not(.sidenote-number) {
   max-width: 43ch;
   word-break: keep-all;
 }
+
 #title details {
   cursor:default;
 }
+
 #title summary {
   cursor:pointer;
 }
-
+/**/
 
 
 /* scrolling */
 .overflow {
   overflow:scroll;
 }
+/**/
 
-  .post-header p {
-    cursor:default;
-  }
+.post-header p {
+  cursor:default;
+}
 
+/* main container */
 .post-container, .interlude-container, .image-container {
   width: 400px;
   margin-bottom:25px;
@@ -194,7 +191,6 @@ margin-top:1rem;
   overflow-x: hidden;
 }
 
-
 .post-container p {
   width: 100%;
 }
@@ -207,26 +203,29 @@ margin-top:1rem;
   top: 7.3rem;
   padding: 10px;
 }
+/**/
 
-
-
+/* image container post */
 .image-container .post {
   border: 1px solid black;
   padding: 10px ;
   background-color: whitesmoke;
 }
+/**/
 
+/* how to pretend not to feel lonely */
 #how-container {
   font-family: "Jacquarda Bastarda 9", serif;
   /* background-color: whitesmoke; */
   text-align: center;
 }
+/**/
 
-
+/* interlude-container */
 .interlude-container .post-header p {
   display:inline;
   font-family: "Jacquarda Bastarda 9", serif;
-  }
+}
 
 .interlude-container p, .interlude-container .post {
   color:lightgrey;
@@ -241,12 +240,14 @@ margin-top:1rem;
   transition:all 1s ease-in-out;
   opacity: 0.3;
 }
+/**/
 
+/* interlude [] */
 .interlude-container .post-header::before {
   content:"[";
   color:black;
-
 }
+
 .interlude-container .post-header::after {
   content:"]";
   color:black;
@@ -256,6 +257,7 @@ margin-top:1rem;
   content:"[";
   color:black;
 }
+
 .interlude-container .post::after {
   content:"]";
   color:black;
@@ -264,9 +266,11 @@ margin-top:1rem;
 .interlude-container .post p:first-child {
   display:inline;
 }
+
 .interlude-container .post p:last-child {
   display:inline;
 }
+/**/
 
 /* interlude hover desktop */
 .interlude-container:hover .post, .interlude-container:hover h1, .interlude-container:hover p {
@@ -282,6 +286,7 @@ margin-top:1rem;
   -webkit-filter:blur(0) grayscale(0);
   opacity: 1;
 }
+/**/
 
 /* menu */
 .menu {
@@ -289,7 +294,6 @@ margin-top:1rem;
   z-index: 10;
   top: 1rem;
   left: 25vw;
-
 }
 
 .menu a:first-child {
@@ -309,7 +313,7 @@ margin-top:1rem;
   background-color: black;
   color: white;
 }
-
+/**/
 
 .interlude-container::before, .post-container::before {
   display: block;
@@ -320,12 +324,13 @@ margin-top:1rem;
 }
 
 #darkmode {
+  opacity: 0;
   color: white;
   font-family: "Jacquarda Bastarda 9", serif;
   position: fixed;
   top: 0;
   left: 1rem;
-
+  cursor: default;
 }
 
 
@@ -398,5 +403,15 @@ label {
 
   .interlude-container img {
     display: none;
+  }
+
+  #darkmode {
+    opacity: 100;
+    color: white;
+    font-family: "Jacquarda Bastarda 9", serif;
+    position: fixed;
+    top: 0;
+    left: 1rem;
+    cursor: default;
   }
 }
