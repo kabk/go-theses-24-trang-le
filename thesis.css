@@ -292,7 +292,7 @@ label {
 }
 
 /* LIGHT MODE */
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
 body {
   background-color: black;
   color: white;
