@@ -6,9 +6,9 @@
   box-sizing:border-box;
 }
 
-*, *:before, *:after {
+/* *, *:before, *:after {
   box-sizing:inherit;
-}
+} */
 
 html {
 counter-reset: sidenote-counter;
@@ -222,53 +222,6 @@ margin-top:1rem;
   text-align: center;
 }
 
-/* MOBILE */
-@media (max-width: 600px) {
-
-  #title {
-    width: 100%;
-    position:relative;
-  }
-  .menu {
-    display:none;
-  }
-  #main {
-    margin-left: 1rem;
-    margin-top: 2rem;
-    margin-right: 2rem;
-  }
-
-  .post-container, .interlude-container, .image-container, .interlude-container .post, {
-    width: 100%;
-  }
-
-  label.margin-toggle:not(.sidenote-number) {
-    display: inline;
-} 
-
-.sidenote,
-.marginnote {
-    display: none;
-}
-
-.margin-toggle:checked + .sidenote,
-.margin-toggle:checked + .marginnote {
-    display: block;
-    float: left;
-    left: 1rem;
-    clear: both;
-    width: 95%;
-    margin: 1rem 2.5%;
-    vertical-align: baseline;
-    position: relative;
-}
-
-label {
-    cursor: pointer;
-}
-}
-
-
 
 .interlude-container .post-header p {
   display:inline;
@@ -281,6 +234,7 @@ label {
   font-weight: 100;
   width: 400px;
 }
+
 .interlude-container p {
   filter: blur(1.5px) grayscale(1);
   -webkit-filter: blur(1.5px) grayscale(1);
@@ -291,7 +245,6 @@ label {
 .interlude-container .post-header::before {
   content:"[";
   color:black;
-
 
 }
 .interlude-container .post-header::after {
@@ -314,6 +267,8 @@ label {
 .interlude-container .post p:last-child {
   display:inline;
 }
+
+/* interlude hover desktop */
 .interlude-container:hover .post, .interlude-container:hover h1, .interlude-container:hover p {
   color:black !important;
   filter:blur(0) grayscale(0);
@@ -321,10 +276,12 @@ label {
   opacity: 1;
 }
 
-/* for pixelated drawings */
-/* img {
-  image-rendering: pixelated;
-} */
+.activemobile {
+  color:black !important;
+  filter:blur(0) grayscale(0);
+  -webkit-filter:blur(0) grayscale(0);
+  opacity: 1;
+}
 
 /* menu */
 .menu {
@@ -370,6 +327,54 @@ label {
   left: 1rem;
 
 }
+
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+  #title {
+    width: 100%;
+    position:relative;
+  }
+  .menu {
+    display:none;
+  }
+  #main {
+    margin-left: 1rem;
+    margin-top: 2rem;
+    margin-right: 1rem;
+  }
+
+  .post-container, .interlude-container, .image-container, .interlude-container .post, .interlude-container p {
+    width: 100%;
+  }
+
+  label.margin-toggle:not(.sidenote-number) {
+    display: inline;
+} 
+
+.sidenote,
+.marginnote {
+    display: none;
+}
+
+.margin-toggle:checked + .sidenote,
+.margin-toggle:checked + .marginnote {
+    display: block;
+    float: left;
+    left: 1rem;
+    clear: both;
+    width: 95%;
+    margin: 1rem 2.5%;
+    vertical-align: baseline;
+    position: relative;
+}
+
+label {
+    cursor: pointer;
+}
+}
+
 
 /* DARK MODE */
 @media (prefers-color-scheme: dark) {
